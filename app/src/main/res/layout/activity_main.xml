@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/teal_200">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:layout_marginStart="@dimen/default_margin_start"
+        android:textSize="@dimen/score_text_size"
+        tools:text="000"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_layout_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:layout_marginEnd="@dimen/default_margin_end"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="@dimen/default_heart_width"
+            android:layout_height="@dimen/default_heart_height"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="@dimen/default_heart_width"
+            android:layout_height="@dimen/default_heart_height"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="@dimen/default_heart_width"
+            android:layout_height="@dimen/default_heart_height"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_FAB_layout"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/default_vertical_margin_linearLayout"
+        android:layout_marginBottom="@dimen/default_margin_bottom_LinearLayout"
+        android:layout_marginHorizontal="@dimen/default_margin_end"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_game_column0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/bin_vector_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_game_column1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/bin_vector_icon"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_game_column2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/bin_vector_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_FAB_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_FAB_linear_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/default_fab_bottom_margin"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_FAB_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/baseline_arrow_circle_left_24"
+            android:layout_marginStart="@dimen/default_fab_margin"
+            android:layout_alignParentStart="true"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_FAB_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/baseline_arrow_circle_right_24"
+            android:layout_marginEnd="@dimen/default_fab_margin"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
