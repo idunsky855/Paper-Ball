@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:gravity="center" >
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menu_MTV_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/menu_appName_margin_top"
+        android:textAlignment="center"
+        android:text="PaperBall"
+        android:textSize="@dimen/menu_appName_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/menu_LL_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/default_linearLayout_horizontal_margin"
+        android:layout_marginTop="@dimen/menu_LL_buttons_margin_top"
+        android:layout_marginBottom="@dimen/menu_LL_bottom_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_buttons"
+            android:layout_width="@dimen/default_btn_width"
+            android:layout_height="@dimen/default_btn_height"
+            android:layout_margin="@dimen/default_btn_margin"
+            android:layout_weight="1"
+            android:text="Controls - Buttons" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_sensors"
+            android:layout_width="@dimen/default_btn_width"
+            android:layout_height="@dimen/default_btn_height"
+            android:layout_margin="@dimen/default_btn_margin"
+            android:layout_weight="1"
+            android:text="Controls - Sensors" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_scores"
+            android:layout_width="@dimen/default_btn_width"
+            android:layout_height="@dimen/default_btn_height"
+            android:layout_margin="@dimen/default_btn_margin"
+            android:layout_weight="1"
+            android:text="Scores" />
+    </LinearLayout>
+
+</RelativeLayout>
