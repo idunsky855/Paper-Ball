@@ -13,6 +13,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.paperball.utilities.Constants
 import com.example.paperball.model.GameManager
+import com.example.paperball.utilities.SignalManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
@@ -92,8 +93,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun toastAndVibrate(msg: String) {
-        toast(msg)
-        vibrate()
+        SignalManager.getInstance().toast(msg)
+        SignalManager.getInstance().vibrate()
     }
 
     private fun toast(text: String) {

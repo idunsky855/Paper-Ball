@@ -13,6 +13,8 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var menu_BTN_buttons: MaterialButton
     private lateinit var menu_BTN_sensors: MaterialButton
     private lateinit var menu_BTN_scores: MaterialButton
+    private var useButtons: Boolean = false
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +26,11 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        menu_BTN_buttons.setOnClickListener {  }
+        menu_BTN_buttons.setOnClickListener {
+            useButtons = true
+            val bundle: Bundle = Bundle()
+
+        }
 
         menu_BTN_sensors.setOnClickListener {  }
 
