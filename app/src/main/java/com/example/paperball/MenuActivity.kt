@@ -1,11 +1,13 @@
 package com.example.paperball
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.paperball.utilities.Constants
 import com.google.android.material.button.MaterialButton
 
 class MenuActivity : AppCompatActivity() {
@@ -28,13 +30,21 @@ class MenuActivity : AppCompatActivity() {
     private fun initViews() {
         menu_BTN_buttons.setOnClickListener {
             useButtons = true
-            val bundle: Bundle = Bundle()
-
+            transactToMainActivity()
         }
 
-        menu_BTN_sensors.setOnClickListener {  }
+        menu_BTN_sensors.setOnClickListener {
+            useButtons = false
+            transactToMainActivity()
+        }
 
-        menu_BTN_scores.setOnClickListener {  }
+        menu_BTN_scores.setOnClickListener {
+            transactToScoreActivity()
+        }
+    }
+
+    private fun transactToScoreActivity() {
+        TODO("Transact To score Activity")
     }
 
     private fun findViews() {
@@ -43,7 +53,12 @@ class MenuActivity : AppCompatActivity() {
         menu_BTN_scores = findViewById(R.id.menu_BTN_scores)
     }
 
-    private fun switchActivity(){
-
+    private fun transactToMainActivity(){
+        val intent = Intent(this, MainActivity::class.java)
+        val b = Bundle()
+        b.putBoolean(Constants.BUTTONS_KEY, useButtons )
+        intent.putExtras(b)
+        startActivity(intent)
+        finish()
     }
 }

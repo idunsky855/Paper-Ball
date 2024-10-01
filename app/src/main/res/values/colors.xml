@@ -5,4 +5,10 @@
     <color name="teal_200">#B2DFDB</color>
     <color name="teal_900_light">#DBFFFF</color>
     <color name="blue_300">#64B5F6</color>
+    <color name="pale_pink">#e8ccc7</color>
+    <color name="pink">#f1b2b2</color>
+    <color name="peach">#e5857b</color>
+    <color name="pale_blue">#7d8bae</color>
+    <color name="night_blue">#45496a</color>
+
 </resources>

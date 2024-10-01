@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/teal_200">
+    android:background="@color/pale_pink">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/main_LBL_score"
@@ -224,6 +224,8 @@
             app:srcCompat="@drawable/baseline_arrow_circle_left_24"
             android:layout_marginStart="@dimen/default_fab_margin"
             android:layout_alignParentStart="true"
+            app:backgroundTint="@color/pale_blue"
+            app:tint="@color/pink"
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -234,6 +236,8 @@
             app:srcCompat="@drawable/baseline_arrow_circle_right_24"
             android:layout_marginEnd="@dimen/default_fab_margin"
             android:layout_alignParentEnd="true"
+            app:backgroundTint="@color/pale_blue"
+            app:tint="@color/pink"
             />
     </RelativeLayout>
 

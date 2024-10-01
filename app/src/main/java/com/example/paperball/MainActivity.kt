@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var main_FAB_left: FloatingActionButton
     private lateinit var main_FAB_right: FloatingActionButton
     private lateinit var main_LBL_score: MaterialTextView
+    private var use_buttons:Boolean? = false
     private var gameManager: GameManager? = null
     private var gameEnded: Boolean = false
     private var timerTicking: Boolean = false
@@ -97,37 +98,6 @@ class MainActivity : AppCompatActivity() {
         SignalManager.getInstance().vibrate()
     }
 
-    private fun toast(text: String) {
-        Toast
-            .makeText(
-                this,
-                text,
-                Toast.LENGTH_SHORT
-            ).show()
-    }
-
-    private fun vibrate() {
-        val vibrator: Vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val vibratorManager =
-                this.getSystemService(VIBRATOR_MANAGER_SERVICE) as VibratorManager
-            vibratorManager.defaultVibrator
-        } else {
-            this.getSystemService(VIBRATOR_SERVICE) as Vibrator
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-
-
-            val oneShotVibrationEffect = VibrationEffect.createOneShot(
-                500,
-                VibrationEffect.DEFAULT_AMPLITUDE
-            )
-            vibrator.vibrate(oneShotVibrationEffect)
-        } else {
-            vibrator.vibrate(500)
-        }
-    }
 
     private fun goToNextActivity(msg: String) {
         val intent = Intent(this, ScoreActivity::class.java)
@@ -143,21 +113,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         findviews()
         gameManager = GameManager(hearts.size)
         initViews()
     }
 
     private fun initViews() {
-        main_FAB_left.setOnClickListener {
-            movePlayer(Constants.LEFT)
+        val bundle: Bundle? = intent.extras
+        use_buttons = bundle?.getBoolean(Constants.BUTTONS_KEY)
+        if(use_buttons == true)
+        {
+            main_FAB_left.setOnClickListener { movePlayer(Constants.LEFT) }
+            main_FAB_right.setOnClickListener { movePlayer(Constants.RIGHT) }
         }
-        main_FAB_right.setOnClickListener {
-            movePlayer(Constants.RIGHT)
-        }
+
         hearts.forEach {
             it.visibility = ShapeableImageView.VISIBLE
         }
+
         main_LBL_score.text = "000"
         startTimer()
     }
