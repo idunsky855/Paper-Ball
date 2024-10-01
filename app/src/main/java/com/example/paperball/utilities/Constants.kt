@@ -10,6 +10,8 @@ class Constants {
         const val STATUS_KEY = "status"
         const val DELAY = 1000L
         const val BUTTONS_KEY = "use_buttons"
+        const val DATA_KEY = "data"
+        const val SCORES_KEY = "scores"
     }
 
 
