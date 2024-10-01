@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity"
-    android:gravity="center" >
+    android:gravity="center"
+    android:background="@color/pale_pink">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/menu_MTV_appName"
@@ -17,7 +18,8 @@
         android:textAlignment="center"
         android:text="PaperBall"
         android:textSize="@dimen/menu_appName_size"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/night_blue"/>
 
     <LinearLayout
         android:id="@+id/menu_LL_buttons"
@@ -40,7 +42,8 @@
             android:layout_height="@dimen/default_btn_height"
             android:layout_margin="@dimen/default_btn_margin"
             android:layout_weight="1"
-            android:text="Controls - Buttons" />
+            android:text="Controls - Buttons"
+            app:backgroundTint="@color/night_blue"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/menu_BTN_sensors"
@@ -48,7 +51,8 @@
             android:layout_height="@dimen/default_btn_height"
             android:layout_margin="@dimen/default_btn_margin"
             android:layout_weight="1"
-            android:text="Controls - Sensors" />
+            android:text="Controls - Sensors"
+            app:backgroundTint="@color/night_blue"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/menu_BTN_scores"
@@ -56,7 +60,8 @@
             android:layout_height="@dimen/default_btn_height"
             android:layout_margin="@dimen/default_btn_margin"
             android:layout_weight="1"
-            android:text="Scores" />
+            android:text="Scores"
+            app:backgroundTint="@color/night_blue"/>
     </LinearLayout>
 
 </RelativeLayout>
