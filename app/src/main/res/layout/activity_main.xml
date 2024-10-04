@@ -105,6 +105,36 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper25"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper30"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper35"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper40"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper45"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_bin0"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -146,6 +176,36 @@
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_paper21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper26"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper31"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper36"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper41"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper46"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -197,6 +257,36 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper27"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper32"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper37"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper42"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper47"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_bin2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -211,7 +301,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
-
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_paper3"
@@ -244,13 +333,42 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper28"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper33"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper38"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper43"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper48"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_bin3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:src="@drawable/bin_vector_icon"/>
-
         </LinearLayout>
 
         <LinearLayout
@@ -259,7 +377,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
-
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_paper4"
@@ -292,6 +409,36 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper29"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper34"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper39"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper44"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper49"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_bin4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -299,6 +446,8 @@
                 android:visibility="invisible"
                 android:src="@drawable/bin_vector_icon"/>
         </LinearLayout>
+
+
     </LinearLayout>
 
     <RelativeLayout
@@ -314,25 +463,29 @@
             android:id="@+id/main_FAB_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@drawable/baseline_arrow_circle_left_24"
-            android:layout_marginStart="@dimen/default_fab_margin"
             android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/default_fab_margin"
+            android:layout_marginEnd="159dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toStartOf="@+id/main_FAB_right"
+            android:clickable="true"
             app:backgroundTint="@color/pale_blue"
-            app:tint="@color/pink"
-            />
+            app:srcCompat="@drawable/baseline_arrow_circle_left_24"
+            app:tint="@color/pink" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/main_FAB_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@drawable/baseline_arrow_circle_right_24"
-            android:layout_marginEnd="@dimen/default_fab_margin"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/default_fab_margin"
+            android:layout_marginBottom="14dp"
+            android:clickable="true"
             app:backgroundTint="@color/pale_blue"
-            app:tint="@color/pink"
-            />
+            app:srcCompat="@drawable/baseline_arrow_circle_right_24"
+            app:tint="@color/pink" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -5,7 +5,7 @@ class Constants {
         const val LEFT = -1
         const val RIGHT = 1
         const val COLS = 5
-        const val ROWS = 5
+        const val ROWS = 10
         const val SCORE_UPDATE = 10
         const val STATUS_KEY = "status"
         const val DELAY = 1000L
