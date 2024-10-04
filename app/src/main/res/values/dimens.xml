@@ -27,4 +27,10 @@
     <dimen name="game_ended_LBL_height">200dp</dimen>
     <dimen name="game_ended_LBL_margin">90dp</dimen>
     <dimen name="default_highscores_padding">16dp</dimen>
+    <dimen name="score_table_string_size">15sp</dimen>
+    <dimen name="score_table_default_margin">3dp</dimen>
+    <dimen name="table_score_default_line_height">40dp</dimen>
+    <dimen name="table_default_margin">5dp</dimen>
+    <dimen name="default_elevation">10dp</dimen>
+    <dimen name="table_title_size">30sp</dimen>
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HighscoresFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/scores_LBL_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/table_score_default_line_height"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="@string/highscore_table"
+        android:textColor="@color/night_blue"
+        android:textSize="@dimen/table_title_size"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scores_RV_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scores_LBL_title"
+        android:layout_centerInParent="true"
+        android:background="@color/pale_pink"
+        tools:listitem="@layout/fragment_score" />
+
+</FrameLayout>
