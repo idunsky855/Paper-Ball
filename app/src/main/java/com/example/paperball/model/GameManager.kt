@@ -4,7 +4,7 @@ import com.example.paperball.utilities.Constants
 import kotlin.random.Random
 
 class GameManager(private val lifeCount: Int = 3) {
-    private var papers = Array<Int>(15) { 0 }
+    private var papers = Array<Int>(Constants.ROWS * Constants.COLS) { 0 }
     private var column: Int = 0
     private var miss: Int = 0
     private var score: Int = 0

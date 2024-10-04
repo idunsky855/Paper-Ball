@@ -1,18 +1,16 @@
 package com.example.paperball
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.VibrationEffect
-import android.os.Vibrator
-import android.os.VibratorManager
-import android.widget.Toast
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.paperball.interfaces.Callback_TiltCallback
 import com.example.paperball.utilities.Constants
 import com.example.paperball.model.GameManager
+import com.example.paperball.utilities.MoveDetector
 import com.example.paperball.utilities.SignalManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView
@@ -30,8 +28,9 @@ class MainActivity : AppCompatActivity() {
     private var gameManager: GameManager? = null
     private var gameEnded: Boolean = false
     private var timerTicking: Boolean = false
-    private var currentColumn: Int = 1
+    private var currentColumn: Int = 2
     private var handler: Handler = Handler(Looper.getMainLooper())
+    private var moveDetector: MoveDetector? = null
 
     val runnable: Runnable = object :  Runnable {
         override fun run() {
@@ -39,19 +38,17 @@ class MainActivity : AppCompatActivity() {
                 refreshUI()
                 playGame()
             }else{
-
                 restartGame()
             }
             handler.postDelayed(this, Constants.DELAY)
         }
-
     }
 
     private fun restartGame() {
         stopTimer()
         gameManager = GameManager(hearts.size)
         initViews()
-        currentColumn = 1
+        currentColumn = 2
         gameEnded = false
     }
 
@@ -62,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updatePapers() {
         var paperLocation = gameManager!!.getPaperArr()
-        for ( i in (0 until  papers.size )){
+        for ( i in (0 until  paperLocation.size )){
 
             if ( paperLocation[i] == 1 ){ // if there is a paper in this location
                 papers[i].visibility = ShapeableImageView.VISIBLE
@@ -126,7 +123,14 @@ class MainActivity : AppCompatActivity() {
         {
             main_FAB_left.setOnClickListener { movePlayer(Constants.LEFT) }
             main_FAB_right.setOnClickListener { movePlayer(Constants.RIGHT) }
+        }else{
+            main_FAB_left.visibility = View.INVISIBLE
+            main_FAB_right.visibility = View.INVISIBLE
+            initMoveDetector()
         }
+
+        papers.forEach {
+            it.visibility = ShapeableImageView.INVISIBLE }
 
         hearts.forEach {
             it.visibility = ShapeableImageView.VISIBLE
@@ -134,6 +138,19 @@ class MainActivity : AppCompatActivity() {
 
         main_LBL_score.text = "000"
         startTimer()
+    }
+
+    private fun initMoveDetector() {
+        moveDetector = MoveDetector(this,
+            object : Callback_TiltCallback {
+                override fun tiltLeft() {
+                    movePlayer(Constants.LEFT)
+                }
+
+                override fun tiltRight() {
+                    movePlayer(Constants.RIGHT)
+                }
+            })
     }
 
     fun startTimer(){
@@ -147,8 +164,6 @@ class MainActivity : AppCompatActivity() {
         timerTicking = false
         handler.removeCallbacks(runnable)
     }
-
-
 
     private fun movePlayer(dir: Int) {
         bins[currentColumn].visibility = ShapeableImageView.INVISIBLE
@@ -185,29 +200,44 @@ class MainActivity : AppCompatActivity() {
                         findViewById(R.id.main_IMG_paper11),
                         findViewById(R.id.main_IMG_paper12),
                         findViewById(R.id.main_IMG_paper13),
-                        findViewById(R.id.main_IMG_paper14)
+                        findViewById(R.id.main_IMG_paper14),
+                        findViewById(R.id.main_IMG_paper15),
+                        findViewById(R.id.main_IMG_paper16),
+                        findViewById(R.id.main_IMG_paper17),
+                        findViewById(R.id.main_IMG_paper18),
+                        findViewById(R.id.main_IMG_paper19),
+                        findViewById(R.id.main_IMG_paper20),
+                        findViewById(R.id.main_IMG_paper21),
+                        findViewById(R.id.main_IMG_paper22),
+                        findViewById(R.id.main_IMG_paper23),
+                        findViewById(R.id.main_IMG_paper24)
         )
 
         bins = arrayOf(
             findViewById(R.id.main_IMG_bin0),
             findViewById(R.id.main_IMG_bin1),
-            findViewById(R.id.main_IMG_bin2)
+            findViewById(R.id.main_IMG_bin2),
+            findViewById(R.id.main_IMG_bin3),
+            findViewById(R.id.main_IMG_bin4)
         )
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
         stopTimer()
+        moveDetector?.stop()
     }
 
     override fun onPause() {
         super.onPause()
         stopTimer()
+        moveDetector?.stop()
+
     }
 
     override fun onResume() {
         super.onResume()
         startTimer()
+        moveDetector?.start()
     }
 }
