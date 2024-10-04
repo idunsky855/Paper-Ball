@@ -4,13 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.Message
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.paperball.interfaces.Callback_TiltCallback
 import com.example.paperball.utilities.Constants
-import com.example.paperball.model.GameManager
+import com.example.paperball.logic.GameManager
 import com.example.paperball.utilities.MoveDetector
 import com.example.paperball.utilities.SignalManager
 import com.example.paperball.utilities.SoundManager
@@ -40,8 +39,6 @@ class MainActivity : AppCompatActivity() {
             if (!gameEnded){
                 refreshUI()
                 playGame()
-            }else{
-                restartGame()
             }
             handler.postDelayed(this, Constants.DELAY)
         }
@@ -76,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         if (gameManager!!.isGameLost()){
             gameEnded = true
             stopTimer()
-            goToNextActivity("Game Over!")
+            goToNextActivity()
         }else{
             checkForMiss()
             bins.forEach { it.visibility = View.INVISIBLE }
@@ -101,10 +98,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun goToNextActivity(message: String) {
-        val intent = Intent(this, ScoreActivity::class.java)
+    private fun goToNextActivity() {
+        val intent = Intent(this, GameEndedActivity::class.java)
         val b = Bundle()
-        b.putString(Constants.STATUS_KEY, message)
+        val str = buildString {
+            append("Game Over!\n")
+            append("Your Score: ${main_LBL_score.text.toString()}")
+        }
+        b.putString(Constants.STATUS_KEY, str)
+        use_buttons?.let { b.putBoolean(Constants.BUTTONS_KEY, it) }
         intent.putExtras(b)
         startActivity(intent)
         finish()

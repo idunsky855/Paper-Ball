@@ -16,6 +16,12 @@
         android:theme="@style/Theme.PaperBall"
         tools:targetApi="31">
         <activity
+            android:name=".HighScoresTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameEndedActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="true">
             <intent-filter>
@@ -26,9 +32,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

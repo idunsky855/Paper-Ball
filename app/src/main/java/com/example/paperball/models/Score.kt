@@ -1,4 +1,4 @@
-package com.example.paperball.model
+package com.example.paperball.models
 
 data class Score(
     var name: String = "",

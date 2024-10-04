@@ -1,4 +1,4 @@
-package com.example.paperball.model
+package com.example.paperball.logic
 
 import com.example.paperball.utilities.Constants
 import kotlin.random.Random

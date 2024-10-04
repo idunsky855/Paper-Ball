@@ -3,7 +3,7 @@ package com.example.paperball.utilities
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.paperball.model.ScoreList
+import com.example.paperball.models.ScoreList
 import com.google.gson.Gson
 
 class SharedPreferencesManager private constructor(context: Context) {

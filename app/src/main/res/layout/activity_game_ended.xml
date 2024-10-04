@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_pink"
+    tools:context=".GameEndedActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/game_ended_LBL_score"
+        android:layout_width="@dimen/game_ended_LBL_width"
+        android:layout_height="@dimen/game_ended_LBL_height"
+        android:layout_above="@+id/ended_LL_buttons"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/game_ended_LBL_margin"
+        android:textAlignment="center"
+        android:textSize="@dimen/game_ended_score_size"
+        android:textColor="@color/night_blue"
+        android:text="Text"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/ended_LL_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/gameEnded_BTN_highscores"
+            android:layout_width="@dimen/default_btn_width"
+            android:layout_height="@dimen/default_btn_height"
+            android:text="HighScores table"
+            app:backgroundTint="@color/night_blue"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/gameEnded_BTN_restart"
+            android:layout_width="@dimen/default_btn_width"
+            android:layout_height="@dimen/default_btn_height"
+            android:text="Restart game"
+            app:backgroundTint="@color/night_blue" />
+    </LinearLayout>
+
+</RelativeLayout>

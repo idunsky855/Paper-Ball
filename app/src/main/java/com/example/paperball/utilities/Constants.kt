@@ -12,6 +12,7 @@ class Constants {
         const val BUTTONS_KEY = "use_buttons"
         const val DATA_KEY = "data"
         const val SCORES_KEY = "scores"
+        const val GAME_ENDED_SCORE_KEY = "game_score"
     }
 
 

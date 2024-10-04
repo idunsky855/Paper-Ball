@@ -21,4 +21,10 @@
     <dimen name="menu_appName_size">45sp</dimen>
     <dimen name="menu_appName_margin_top">180dp</dimen>
     <dimen name="menu_LL_buttons_margin_top">390dp</dimen>
+    <dimen name="game_ended_score_size">60sp</dimen>
+    <dimen name="game_ended_score_margin_bottom">200dp</dimen>
+    <dimen name="game_ended_LBL_width">250dp</dimen>
+    <dimen name="game_ended_LBL_height">200dp</dimen>
+    <dimen name="game_ended_LBL_margin">90dp</dimen>
+    <dimen name="default_highscores_padding">16dp</dimen>
 </resources>
