@@ -29,7 +29,6 @@ class HighScoresTableActivity : AppCompatActivity() {
 
     private fun initViews() {
         highscoresFragment = HighscoresFragment()
-
         supportFragmentManager.beginTransaction().add(R.id.main_FRAME_scores, highscoresFragment).commit()
 
         highscoresFragment.highscoresCallback = object : Callback_HighscoresCallback {
@@ -37,7 +36,6 @@ class HighScoresTableActivity : AppCompatActivity() {
         }
 
         mapFragment = MapsFragment()
-
         supportFragmentManager.beginTransaction().add(R.id.main_FRAME_map, mapFragment).commit()
 
         table_BTN_menu.setOnClickListener{

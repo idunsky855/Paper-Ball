@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -72,7 +73,7 @@ class GameEndedActivity : AppCompatActivity() {
 
     @Override
     private fun onClick(score: Int) {
-
+        username = input.text.toString()
         // Check for location permissions
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -91,17 +92,18 @@ class GameEndedActivity : AppCompatActivity() {
             if (location != null) {
                 val lat = location.latitude
                 val long = location.longitude
-                val SPmanager= SharedPreferencesManager.getInstance()
+                val sharedPreferencesManager = SharedPreferencesManager.getInstance()
                 val gson = Gson()
-                val scorelistFromSP=SPmanager.getString(Constants.SCORES_KEY,"")
-                var scorelist=gson.fromJson(scorelistFromSP, ScoreList::class.java)
-                if (scorelist==null){
-                    scorelist=ScoreList()
+                val scorelistFromSP = sharedPreferencesManager.getString(Constants.SCORES_KEY,"")
+                var scorelist = gson.fromJson(scorelistFromSP, ScoreList::class.java)
+                if (scorelist == null){
+                    scorelist = ScoreList()
                 }
-                scorelist.addScore(Score(username,score,lat,long))
+                scorelist.addScore(Score( username, score, lat, long))
                 scorelist.scoresArrayList.sort()
                 val scorelistString=gson.toJson(scorelist)
-                SPmanager.putString(Constants.SCORES_KEY,scorelistString)
+                sharedPreferencesManager.putString(Constants.SCORES_KEY,scorelistString)
+
             }
         }
     }

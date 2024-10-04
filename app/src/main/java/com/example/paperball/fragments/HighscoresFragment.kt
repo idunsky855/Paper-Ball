@@ -1,6 +1,7 @@
 package com.example.paperball.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,13 +30,11 @@ class HighscoresFragment : Fragment(){
         binding=FragmentHighscoresBinding.inflate(inflater,container,false)
         val view=binding.root
         val scoreList= SharedPreferencesManager.getInstance().getScoreListFromSP()
-
         val scoreAdapter= ScoreAdapter(scoreList.scoresArrayList)
-        scoreAdapter.callback_ScoreCallback=object : Callback_ScoreCallback {
+        scoreAdapter.callback_ScoreCallback = object : Callback_ScoreCallback {
             override fun scoreClicked(score: Score, position: Int) {
                 highscoresCallback?.getLocation(score.lat,score.lon)
             }
-
         }
         binding.scoresRVTable.adapter=scoreAdapter
 

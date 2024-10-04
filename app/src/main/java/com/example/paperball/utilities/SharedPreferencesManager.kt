@@ -22,7 +22,7 @@ class SharedPreferencesManager private constructor(context: Context) {
 
         fun getInstance(): SharedPreferencesManager {
             return instance
-                ?: throw IllegalStateException("SharedPreferencesManagerV3 must be initialized by calling init(context) before use.")
+                ?: throw IllegalStateException("SharedPreferencesManager must be initialized by calling init(context) before use.")
         }
     }
 
@@ -44,7 +44,7 @@ class SharedPreferencesManager private constructor(context: Context) {
         if (scoreListString.isEmpty()){
             return ScoreList()
         }
-        scorelist=gson.fromJson(scoreListString, ScoreList::class.java)
+        scorelist = gson.fromJson(scoreListString, ScoreList::class.java)
 
         return scorelist
     }
