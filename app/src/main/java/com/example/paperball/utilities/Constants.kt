@@ -4,7 +4,7 @@ class Constants {
     companion object {
         const val LEFT = -1
         const val RIGHT = 1
-        const val COLS = 3
+        const val COLS = 5
         const val ROWS = 5
         const val SCORE_UPDATE = 10
         const val STATUS_KEY = "status"

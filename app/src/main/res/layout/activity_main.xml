@@ -81,25 +81,25 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper3"
+                android:id="@+id/main_IMG_paper5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper6"
+                android:id="@+id/main_IMG_paper10"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper9"
+                android:id="@+id/main_IMG_paper15"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper12"
+                android:id="@+id/main_IMG_paper20"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -120,7 +120,6 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_paper1"
                 android:layout_width="match_parent"
@@ -128,59 +127,7 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper7"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper10"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper13"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_bin1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/bin_vector_icon"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/layout_game_column2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper5"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/paper_ball"/>
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper8"
+                android:id="@+id/main_IMG_paper6"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -192,13 +139,160 @@
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/main_IMG_paper14"
+                android:id="@+id/main_IMG_paper16"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/bin_vector_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_game_column2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper17"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper22"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/paper_ball"/>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_IMG_bin2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:src="@drawable/bin_vector_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_game_column3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper18"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper23"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/bin_vector_icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_game_column4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper19"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_paper24"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper_ball"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_bin4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
