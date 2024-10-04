@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.Message
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.example.paperball.utilities.Constants
 import com.example.paperball.model.GameManager
 import com.example.paperball.utilities.MoveDetector
 import com.example.paperball.utilities.SignalManager
+import com.example.paperball.utilities.SoundManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private var currentColumn: Int = 2
     private var handler: Handler = Handler(Looper.getMainLooper())
     private var moveDetector: MoveDetector? = null
+    private var soundManager: SoundManager = SoundManager(this)
 
     val runnable: Runnable = object :  Runnable {
         override fun run() {
@@ -73,16 +76,18 @@ class MainActivity : AppCompatActivity() {
         if (gameManager!!.isGameLost()){
             gameEnded = true
             stopTimer()
-
-            //goToNextActivity("Game Over!")
+            goToNextActivity("Game Over!")
         }else{
             checkForMiss()
+            bins.forEach { it.visibility = View.INVISIBLE }
+            bins[currentColumn].visibility = View.VISIBLE
         }
     }
 
     private fun checkForMiss() {
         if (gameManager!!.checkForMiss(currentColumn)){
             toastAndVibrate("Missed!")
+            soundManager.playSound(R.raw.failed)
             hearts[gameManager!!.getMiss() - 1].visibility = ShapeableImageView.INVISIBLE
         }
         main_LBL_score.text = "${gameManager!!.getScore()}"
@@ -90,16 +95,16 @@ class MainActivity : AppCompatActivity() {
             gameEnded = true
     }
 
-    private fun toastAndVibrate(msg: String) {
-        SignalManager.getInstance().toast(msg)
+    private fun toastAndVibrate(message: String) {
+        SignalManager.getInstance().toast(message)
         SignalManager.getInstance().vibrate()
     }
 
 
-    private fun goToNextActivity(msg: String) {
+    private fun goToNextActivity(message: String) {
         val intent = Intent(this, ScoreActivity::class.java)
         val b = Bundle()
-        b.putString(Constants.STATUS_KEY, msg)
+        b.putString(Constants.STATUS_KEY, message)
         intent.putExtras(b)
         startActivity(intent)
         finish()
