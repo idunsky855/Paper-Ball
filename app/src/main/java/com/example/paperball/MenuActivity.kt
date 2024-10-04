@@ -41,7 +41,11 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun transactToHighScoreActivity() {
-        TODO("Transact To score Activity")
+        val intent = Intent(this, HighScoresTableActivity::class.java)
+        val b = Bundle()
+        intent.putExtras(b)
+        startActivity(intent)
+        finish()
     }
 
     private fun findViews() {

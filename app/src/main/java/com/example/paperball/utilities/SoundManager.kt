@@ -6,7 +6,7 @@ import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
 
-class soundManager(private val context: Context) {
+class SoundManager(private val context: Context) {
     private val executor: Executor = Executors.newSingleThreadExecutor()
     private var mediaPlayer: MediaPlayer? = null
 

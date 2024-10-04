@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.paperball.fragments.HighscoresFragment
 import com.example.paperball.fragments.MapsFragment
 import com.example.paperball.interfaces.Callback_HighscoresCallback
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HighScoresTableActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class HighScoresTableActivity : AppCompatActivity() {
     private lateinit var main_FRAME_map: FrameLayout
     private lateinit var highscoresFragment: HighscoresFragment
     private lateinit var mapFragment: MapsFragment
-    private lateinit var table_BTN_menu: FloatingActionButton
+    private lateinit var table_BTN_menu: MaterialButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -36,8 +36,9 @@ class MainActivity : AppCompatActivity() {
 
     val runnable: Runnable = object :  Runnable {
         override fun run() {
+
+            refreshUI()
             if (!gameEnded){
-                refreshUI()
                 playGame()
             }
             handler.postDelayed(this, Constants.DELAY)
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkForMiss() {
         if (gameManager!!.checkForMiss(currentColumn)){
-            toastAndVibrate("Missed!")
+            toastAndVibrate("Missed! ${gameManager!!.getMiss()}")
             soundManager.playSound(R.raw.failed)
             hearts[gameManager!!.getMiss() - 1].visibility = ShapeableImageView.INVISIBLE
         }

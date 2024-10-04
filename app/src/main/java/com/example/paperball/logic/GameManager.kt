@@ -12,7 +12,7 @@ class GameManager(private val lifeCount: Int = 3) {
 
 
     fun isGameLost(): Boolean {
-        return lifeCount == 0
+        return lifeCount == miss
     }
 
     fun playerMovement(dir: Int, currentColumn: Int): Int {
