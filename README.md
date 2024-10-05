@@ -33,6 +33,13 @@ PaperBall is an Android game written with Kotlin where you play as a trash bin, 
   </div>
 </div>
 
+## Gameplay for Example
+
+<div style="width: 250px;">
+  https://github.com/user-attachments/assets/d7ef789a-7345-4310-85ff-afce0027ca9f
+</div>
+
+
 ## System Requirements
 - Android 8.0 or higher
 - Smartphone with motion sensors (for sensor control mode)
