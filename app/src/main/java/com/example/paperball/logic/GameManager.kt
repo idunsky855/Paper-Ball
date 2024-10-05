@@ -1,6 +1,7 @@
 package com.example.paperball.logic
 
 import com.example.paperball.utilities.Constants
+import kotlin.math.abs
 import kotlin.random.Random
 
 class GameManager(private val lifeCount: Int = 3) {
@@ -44,7 +45,7 @@ class GameManager(private val lifeCount: Int = 3) {
             papers[i - Constants.COLS] = 0 // clear the previous position
         }
 
-        var generatePaper = Random.nextInt(0, 3)
+        var generatePaper = abs(Random.nextInt()%3)
         if (generatePaper == 0){
             column = Random.nextInt(0,Constants.COLS)
             papers[column] = 1

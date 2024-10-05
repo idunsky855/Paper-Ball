@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkForMiss() {
         if (gameManager!!.checkForMiss(currentColumn)){
-            toastAndVibrate("Missed! ${gameManager!!.getMiss()}")
+            toastAndVibrate("Missed!")
             soundManager.playSound(R.raw.failed)
             hearts[gameManager!!.getMiss() - 1].visibility = ShapeableImageView.INVISIBLE
         }
