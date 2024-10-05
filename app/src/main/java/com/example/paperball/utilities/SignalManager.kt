@@ -24,8 +24,6 @@ class SignalManager private constructor(context: Context) {
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-
                 val oneShotVibrationEffect = VibrationEffect.createOneShot(
                     500,
                     VibrationEffect.DEFAULT_AMPLITUDE
