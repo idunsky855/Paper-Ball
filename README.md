@@ -1,4 +1,3 @@
-
 # PaperBall
 
 ## Description
@@ -11,10 +10,28 @@ PaperBall is an Android game written with Kotlin where you play as a trash bin, 
 - Engaging sound effects
 
 ## Screens
-![Menu Activity](https://github.com/user-attachments/assets/3968a257-be3b-4d71-b0e3-005c08972f56)
-![Buttons mode](https://github.com/user-attachments/assets/980ef7fd-b456-4d2e-a1fb-6a7e3a6cdbdb)
-![Sensors mode](https://github.com/user-attachments/assets/f0b1de11-1bf3-44b5-bfd9-fc70565354b3)
-![HighScores Table](https://github.com/user-attachments/assets/03475667-60c0-4fa2-a7f6-438b0d567494)
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <div style="width: 250px;">
+    <img src="https://github.com/user-attachments/assets/3968a257-be3b-4d71-b0e3-005c08972f56" width="250" alt="Menu Activity">
+    <p>Main Menu</p>
+  </div>
+  <div style="width: 250px;">
+    <img src="https://github.com/user-attachments/assets/980ef7fd-b456-4d2e-a1fb-6a7e3a6cdbdb" width="250" alt="Buttons mode">
+    <p>Buttons Mode Gameplay</p>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 250px;">
+    <img src="https://github.com/user-attachments/assets/f0b1de11-1bf3-44b5-bfd9-fc70565354b3" width="250" alt="Sensors mode">
+    <p>Sensors Mode Gameplay</p>
+  </div>
+  <div style="width: 250px;">
+    <img src="https://github.com/user-attachments/assets/03475667-60c0-4fa2-a7f6-438b0d567494" width="250" alt="HighScores Table">
+    <p>Highscore Table</p>
+  </div>
+</div>
 
 ## System Requirements
 - Android 8.0 or higher
