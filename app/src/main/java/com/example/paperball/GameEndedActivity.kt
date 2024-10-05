@@ -43,8 +43,13 @@ class GameEndedActivity : AppCompatActivity() {
 
     private fun initViews() {
         val bundle: Bundle? = intent.extras
-        val text = bundle?.getString(Constants.STATUS_KEY)
-        game_ended_LBL_score.text = text
+        score = bundle?.getInt(Constants.GAME_SCORE_KEY)!!
+        game_ended_LBL_score.text = buildString {
+            append("Game Over!\n")
+            append("Your Score: ${score}")
+        }
+
+
 
         gameEnded_BTN_restart.setOnClickListener {
             transactToMainActivity()
@@ -102,6 +107,7 @@ class GameEndedActivity : AppCompatActivity() {
                 scorelist.addScore(Score( username, score, lat, long))
                 scorelist.scoresArrayList.sort()
                 val scorelistString=gson.toJson(scorelist)
+                Log.w("ScoreList", "Json: $scorelistString ")
                 sharedPreferencesManager.putString(Constants.SCORES_KEY,scorelistString)
 
             }

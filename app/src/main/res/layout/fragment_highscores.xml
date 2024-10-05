@@ -9,7 +9,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/scores_LBL_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/table_score_default_line_height"
+        android:layout_height="@dimen/table_Scores_title_height"
         android:layout_margin="5dp"
         android:gravity="center"
         android:text="@string/highscore_table"

@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.paperball.R
 import com.example.paperball.adapter.ScoreAdapter
 import com.example.paperball.databinding.FragmentHighscoresBinding
 import com.example.paperball.interfaces.Callback_HighscoresCallback
@@ -30,7 +29,7 @@ class HighscoresFragment : Fragment(){
         binding=FragmentHighscoresBinding.inflate(inflater,container,false)
         val view=binding.root
         val scoreList= SharedPreferencesManager.getInstance().getScoreListFromSP()
-        val scoreAdapter= ScoreAdapter(scoreList.scoresArrayList)
+        val scoreAdapter = ScoreAdapter(scoreList.scoresArrayList)
         scoreAdapter.callback_ScoreCallback = object : Callback_ScoreCallback {
             override fun scoreClicked(score: Score, position: Int) {
                 highscoresCallback?.getLocation(score.lat,score.lon)

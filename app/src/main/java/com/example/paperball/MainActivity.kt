@@ -102,11 +102,7 @@ class MainActivity : AppCompatActivity() {
     private fun goToNextActivity() {
         val intent = Intent(this, GameEndedActivity::class.java)
         val b = Bundle()
-        val str = buildString {
-            append("Game Over!\n")
-            append("Your Score: ${main_LBL_score.text.toString()}")
-        }
-        b.putString(Constants.STATUS_KEY, str)
+        b.putInt(Constants.GAME_SCORE_KEY, gameManager!!.getScore())
         use_buttons?.let { b.putBoolean(Constants.BUTTONS_KEY, it) }
         intent.putExtras(b)
         startActivity(intent)
