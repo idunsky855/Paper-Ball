@@ -90,6 +90,9 @@ class GameManager(private val lifeCount: Int = 3) {
         return score
     }
 
+    fun odometer() {
+        score++
+    }
 
 
 }

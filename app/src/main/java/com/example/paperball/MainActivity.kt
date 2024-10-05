@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
     private fun playGame() {
         gameManager?.paperMovement()
         updatePapers()
+        gameManager?.odometer()
     }
 
     private fun updatePapers() {
